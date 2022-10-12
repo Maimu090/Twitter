@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="content">
+      <main class="nav">
+        <img src="./twitter icon.png" />
+        <div class="icons">
+          <span>
+            <i class="fa fa-home"></i>
+            <h3>Home</h3>
+          </span>
+          <span>
+            <i class="fa fa-internet-explorer"></i>
+            <p>Explore</p></span
+          ><span>
+            <i class="fa fa-commenting-o"></i>
+            <p>Notification</p></span
+          >
+          <span>
+            <i class="fa fa-comments-o"></i>
+            <p>Messages</p></span
+          >
+          <span>
+            <i class="fa fa-bookmark"></i>
+            <p>Bookmarks</p></span
+          >
+
+          <span>
+            <i class="fa fa-list"></i>
+            <p>Lists</p></span
+          >
+          <span>
+            <i class="fa fa-user-md"></i>
+            <p>Profile</p></span
+          >
+          <span>
+            <i class="fa fa-caret-square-o-down"></i>
+            <p>More</p></span
+          >
+        </div>
+        <div class="button">
+          <a href="#">Tweet</a>
+        </div>
+
+        <section class="profile">
+          <img src="./images (6).jpeg" />
+          <h3>Coder girl</h3>
+          <p>@dev_maims</p>
+          <i class="fa fa-ellipsis-h"></i>
+        </section>
+      </main>
+
+      <!-- home -->
+      <nav class="home">
+        <div class="what">
+          <section class="tweet">
+            <h2>Home</h2>
+            <i class="fa fa-star-o"></i>
+          </section>
+          <div class="photo">
+            <img src="./images (6) - Copy.jpeg" />
+            <h3>What's happening?</h3>
+          </div>
+          <div class="loc">
+            <i class="fa fa-picture-o"></i>
+            <i class="fa fa-meetup"></i>
+            <i class="fa fa-video-camera"></i>
+            <i class="fa fa-smile-o"></i>
+            <i class="fa fa-clock-o"></i>
+            <i class="fa fa-map-marker"></i>
+            <div class="button">
+              <a href="#">Tweet</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="why">
+          <section class="emoji">
+            <img src="./images (10).jpeg" />
+            <h3>Papi @_Papi.16s</h3>
+          </section>
+          <div class="web">
+            <p>Web Scrapping</p>
+            <p>request.get(url) test vs driver.get(url).page source</p>
+            <p>
+              Can anyone help explain why both of these return different results
+              for the same url?
+            </p>
+            <i class="fa fa-comments"></i>
+            <i class="fa fa-retweet"></i>
+            <i class="fa fa-heart-o"></i>
+            <i class="fa fa-download"></i>
+          </div>
+        </div>
+        <div class="polygon">
+          <img src="./images (6) - Copy.jpeg" />
+          <h3>Coder girl @dev_maims.14s</h3>
+        </div>
+        <div class="web">
+          <p>if you applied for the polygon Africa Bootcamp</p>
+          <p>There should be a decision in your email</p>
+          <i class="fa fa-comments"></i>
+          <i class="fa fa-retweet"></i>
+          <i class="fa fa-heart-o"></i>
+          <i class="fa fa-download"></i>
+        </div>
+      </nav>
+
+      <!-- sidebar -->
+
+      <aside class="sidebar">
+        <div class="header">
+          <form action="#">
+            <input type="text" name="name" placeholder="Search Twitter" />
+          </form>
+        </div>
+
+        <div class="trend">
+          <h2>Trends for you</h2>
+          <div class="trending">
+            <span>
+              <h3>Trending in Nigeria</h3>
+              <i class="fa fa-ellipsis-h"></i>
+            </span>
+            <h4>#ASSUstrike</h4>
+            <p>25.5k Tweets</p>
+          </div>
+          <div class="trending">
+            <span>
+              <h3>Trending in Nigeria</h3>
+              <i class="fa fa-ellipsis-h"></i>
+            </span>
+            <h4>#ALekkiMassacre</h4>
+            <p>9,063 Tweets</p>
+          </div>
+          <div class="trending">
+            <span>
+              <h3>Trending in Nigeria</h3>
+              <i class="fa fa-ellipsis-h"></i>
+            </span>
+            <h4>Nigerian Navy</h4>
+            <p>!,994 Tweets</p>
+          </div>
+          <div class="trending">
+            <span>
+              <h3>Trending in Nigeria</h3>
+              <i class="fa fa-ellipsis-h"></i>
+            </span>
+            <h4>Frontend</h4>
+            <p>7,338 Tweets</p>
+          </div>
+          <div class="trending">
+            <span>
+              <h3>Trending in Nigeria</h3>
+              <i class="fa fa-ellipsis-h"></i>
+            </span>
+            <h4>Quran</h4>
+            <p>45.5k Tweets</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </body>
+</html>
+
+<!-- -----Javascript------- -->
+<script src="https://use.fontawesome.com/21967494a9.js"></script>
+<script>
+  const getElement = (selector) => {
+    const element = document.querySelector(selector);
+
+    if (element) return element;
+    throw Error(
+      `Please double check your class names, there is no ${selector} class`
+    );
+  };
+
+  const links = getElement(".nav-links");
+  const navBtnDOM = getElement(".nav-btn");
+
+  navBtnDOM.addEventListener("click", () => {
+    links.classList.toggle("show-links");
+  });
+</script>

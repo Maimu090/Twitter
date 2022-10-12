@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="div-wrapper">
+      <img src="./download twitter.png" />
+      <div class="happening">
+        <h2>Happeing now</h2>
+        <h3>Join Twitter now</h3>
+        <div class="login-page">
+          <div class="box box-one">
+            <button>
+              <i class="fa fa-google-plus"></i>
+              <span>Sign in with Google</span>
+            </button>
+            <button>
+              <i class="fa fa-apple"></i>
+              <span>Sign in with Apple</span>
+            </button>
+          </div>
+          <h5>Or</h5>
+          <div class="box box-two">
+            <form action="#">
+              <input
+                type="text"
+                name="Name"
+                value=""
+                placeholder="Phone,
+    email or Username"
+              />
+            </form>
+            <button class="next-btn">Next</button>
+            <button>Forgot Password</button>
+          </div>
+          <h4>Don't have an account</h4>
+          <a href="login.html">Sign up</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="#">About</a>
+      <a href="#">Help Center</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy</a>
+      <a href="#">policy</a>
+      <a href="#">cookie</a>
+      <a href="#">Advertising</a>
+    </footer>
+
+    <div class="setting">
+      <h4>Settings</h4>
+      <p>@2022 Twitter</p>
+    </div>
+  </body>
+</html>
+
+<!-- -----Javascript------- -->
+<script src="https://use.fontawesome.com/21967494a9.js"></script>
+<script>
+  const getElement = (selector) => {
+    const element = document.querySelector(selector);
+
+    if (element) return element;
+    throw Error(
+      `Please double check your class names, there is no ${selector} class`
+    );
+  };
+
+  const links = getElement(".nav-links");
+  const navBtnDOM = getElement(".nav-btn");
+
+  navBtnDOM.addEventListener("click", () => {
+    links.classList.toggle("show-links");
+  });
+</script>
